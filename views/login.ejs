@@ -1,0 +1,67 @@
+<!--Login.ejs code-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login | Secure Access</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Optional: For cool background gradient or overlays */
+    body {
+      background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+    }
+  </style>
+</head>
+<body class="text-white min-h-screen flex items-center justify-center px-4">
+
+  <div class="w-full max-w-md bg-zinc-900 border border-zinc-800 shadow-xl rounded-xl p-8 backdrop-blur-lg">
+    
+    <!-- Title -->
+    <h2 class="text-3xl font-bold mb-1 text-center text-zinc-100">Welcome Back 👋</h2>
+    <p class="text-sm text-zinc-500 text-center mb-8">Please login to your account</p>
+    
+    <!-- Login Form -->
+    <form action="/login" method="post" class="space-y-5">
+
+      <!-- Email -->
+      <div>
+        <label for="email" class="block text-sm text-zinc-400 mb-1">Email</label>
+        <input 
+          type="email" 
+          name="email" 
+          id="email" 
+          placeholder="you@example.com"
+          required
+          class="w-full px-4 py-2 bg-zinc-800 border border-zinc-700 rounded-md placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+      </div>
+
+      <!-- Password -->
+      <div>
+        <label for="password" class="block text-sm text-zinc-400 mb-1">Password</label>
+        <input 
+          type="password" 
+          name="password" 
+          id="password" 
+          placeholder="••••••••"
+          required
+          class="w-full px-4 py-2 bg-zinc-800 border border-zinc-700 rounded-md placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+      </div>
+
+      <!-- Submit Button -->
+      <div>
+        <input 
+          type="submit" 
+          value="Login" 
+          class="w-full bg-blue-600 hover:bg-blue-700 transition text-sm font-medium py-2 px-4 rounded-md shadow-md cursor-pointer"
+        />
+      </div>
+    </form>
+
+  </div>
+
+</body>
+</html>
